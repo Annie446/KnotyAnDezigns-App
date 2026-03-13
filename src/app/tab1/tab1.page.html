@@ -1,17 +1,61 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Tab 1
+      Home
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Tab 1</ion-title>
-    </ion-toolbar>
-  </ion-header>
+  <p>Welcome to Knoty An Dezigns! </p>
 
-  <app-explore-container name="Tab 1 page"></app-explore-container>
+<ion-button (click)="gotoTab2()" color="tertiary"> Product Page </ion-button>
+<ion-button (click)="gotoTab3()" color="tertiary"> Review Page</ion-button>
+
+  <div class="page-grid">
+    <div class="img">
+      <ion-img src="assets/KAD_Logo.jpg"></ion-img>
+    </div>
+
+    <div class="content">
+      <p> Knoty An Dezigns founded by Anna A. Reece, is a registered business in Saint Lucia ad of December 18, 2020.
+        Originally the business made only friendship bracelet styled
+        jewelry. Ranging from chokers to bracelets to rings to waist chains and anklets. In 2018 and 2019, Anna decided
+        she wanted to expand her product line rather than
+        limiting herself to only friendship bracelet styled jewelry. This is when she discovered resin. With her science
+        background she was intrigued. With failure after failure
+        she finally figured out how to make unique resin pieces. To kick off this now product line, our resin keychains
+        were introduced to the public in 2020. At the point there
+        refinement of the craft was needed. A soft launch was done to test the receptiveness of current customers and
+        the potential market diaspora. Once released the initial keychains
+        received a positive response confirming the addition to our product line.
+
+        Ever since this introduction, Knoty An Dezigns has increased its resin product line as they now offer a variety
+        of keychains, lash trays, ash trays, 6 inch letter with and without lights,
+        resin pour wall art, pens, books, bookmarks, dominos, boxes, self defense tools,paper weights, necklaces and
+        more.
+        Now that we have grown in the field of resin, our founder had an idea of adding plastic into our creation. She
+        has a passion for Marine life conservation. She knows that apart from toxic
+        chemicals released into our waterways, that plastic, our garbage, has a major impact on our marine eco system.
+        She believes that no matter how small, an action taken to reduce our addition
+        plastic will make a difference. She wants to make a difference and is now looking into creating products that no
+        only add a smile to our customers but are also sustainable.
+
+        The future of Knoty An Dezigns is turning waste into wonder, while spreading love and joy to customers. We blend
+        creativity and sustainability to produce eco-friendly designs
+
+      </p>
+    </div>
+  </div>
+
+  <ion-footer>
+    
+  <ul>
+    <li><a href="https://www.instagram.com/knotyandezigns/">Instagram</a></li>
+    <li><a href="https://www.facebook.com/people/Knoty-AnDezigns/100063517482565/">Facebook</a></li>
+    <li> E-mail: {{email}} </li>
+    <li> Telephone: {{number}}</li>
+  </ul> 
+
+</ion-footer>
 </ion-content>

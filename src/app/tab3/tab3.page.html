@@ -1,17 +1,49 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Tab 3
+    Review page
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Tab 3</ion-title>
-    </ion-toolbar>
-  </ion-header>
+  <form [formGroup]= "reviewForm" (ngSubmit)="onSubmit()">
 
-  <app-explore-container name="Tab 3 page"></app-explore-container>
+    <ion-item>
+      <ion-label position ="floating"> Name</ion-label>
+      <ion-input formControlName="rName" type="text"></ion-input>
+    </ion-item>
+
+  <ion-item>
+    <ion-label> Rating</ion-label>
+    <ion-select  formControlName="rating" required>
+      @for (r of list; track r){
+      <ion-select-option [value]="r">{{r}} stars</ion-select-option>}
+    </ion-select>
+    </ion-item>
+    
+    <ion-item>
+      <ion-label position="floating"> Review</ion-label>
+      <ion-input type=" text" formControlName="review" ></ion-input>
+    </ion-item>
+
+  <ion-button type="submit" color="tertiary" [disabled]="reviewForm.invalid"> Submit</ion-button>
+  </form>
+
+<hr>
+
+  <ion-list>
+    @for (review of reviews; track review){
+    <ion-item>
+      <ion-label>
+        <h2>{{ review.rName }}</h2>
+        <p>⭐ {{ review.rating }}</p>
+        <p>{{ review.review }}</p>
+        <small>{{ review.date | date:'medium' }}</small>
+      </ion-label>
+    </ion-item>
+  }
+  </ion-list>
+
+  
 </ion-content>
